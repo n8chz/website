@@ -246,6 +246,7 @@ Rails.application.routes.draw do
   get "cli-walkthrough" => "pages#cli_walkthrough", as: "cli_walkthrough_page"
 
   resource :team_page, only: [:show], path: "team" do
+    get :staff
     get :maintainers
     get :mentors
     get :contributors
