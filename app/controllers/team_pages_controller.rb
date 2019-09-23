@@ -5,7 +5,7 @@ class TeamPagesController < ApplicationController
   def maintainers
     @page = params[:page]
     @maintainers_last_updated_at = Maintainer.order('updated_at DESC').limit(1).pluck(:updated_at)[0].to_i
-    @maintainers = Maintainer.visible.reorder(Arel.sql('LENGTH(bio) DESC')).
+    @maintainers = Maintainer.visible.reorder(Arel.sql('name ASC')).
                                       page(@page).
                                       group(:github_username).
                                       per(40)

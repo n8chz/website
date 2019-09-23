@@ -2,11 +2,24 @@
 @import 'mixins';
 
 #team-members-page {
+    .pagination {
+        margin: 0 auto;
+    }
     section {
-        padding:50px 0 0 0;
+        padding:30px 0 0 0;
 
         &.organisation-top-banner-section {
-            padding:0
+            padding:0;
+            margin-bottom:20px;
+        }
+        h3 {
+            @include font-size(16, 20);
+            color:#fff;
+            a {
+                color:#fff;
+                text-decoration:none;
+                border-bottom:1px solid #ddd;
+            }
         }
     }
     h2 {
@@ -37,6 +50,7 @@
             @include font-size(14, 20);
             letter-spacing:-0.3px;
         }
+
     }
 
     .person {
@@ -51,6 +65,7 @@
             padding-right:20px;
             border-radius:2px;
         }
+
         h3 {
             color:#333;
             @include font-size(18, 18);
@@ -62,6 +77,10 @@
         }
         .bio {
             color:#333;
+            @include font-size(15, 20);
+        }
+        .holding-text {
+            color:#999;
             @include font-size(15, 20);
         }
     }
