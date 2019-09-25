@@ -15,7 +15,7 @@ class PagesController < ApplicationController
     "Become a Maintainer": :become_a_maintainer,
     "Report Abuse": :report_abuse,
     "Contact": :contact,
-    "Contribute": :contribute,
+    "How to Contribute": :contribute,
     "Mentored Mode vs Independent Mode": :mentored_mode_vs_independent_mode,
 
     "Strategy": :strategy,

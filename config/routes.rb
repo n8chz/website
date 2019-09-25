@@ -248,8 +248,8 @@ Rails.application.routes.draw do
   resource :team_page, only: [:show], path: "team" do
     get :staff
     get :maintainers
-    get :mentors
     get :contributors
+    get :mentors
   end
 
   # #### #

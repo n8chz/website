@@ -14,7 +14,7 @@ class TeamPagesController < ApplicationController
   def mentors
     @page = params[:page]
     @mentors_last_updated_at = Mentor.order('updated_at DESC').limit(1).pluck(:updated_at)[0].to_i
-    @mentors = Mentor.reorder(Arel.sql('LENGTH(bio) DESC')).
+    @mentors = Mentor.reorder(Arel.sql('created_at DESC')).
                       page(@page).
                       group(:github_username).
                       per(40)

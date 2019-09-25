@@ -1,8 +1,101 @@
 @import 'variables';
 @import 'mixins';
 
+#team-intro-page {
+    section.intro-section {
+        padding:50px 0;
+        margin-bottom:0;
+
+        @include width-medium() {
+            border-bottom:none !important;
+            .lo-container {
+                display:flex;
+                align-items: center;
+            }
+        }
+
+        h2 {
+            @include font-size(23, 27);
+            font-weight:$fw-semibold;
+            margin-bottom:10px;
+        }
+
+
+        p {
+            @include font-size(16, 22);
+            margin-bottom:10px;
+            a {
+                color:$color-2;
+                font-weight:$fw-semibold;
+            }
+        }
+
+        .content {
+            margin-bottom:50px;
+
+            @include width-medium() {
+                margin-bottom:0;
+                width:45%;
+            }
+        }
+
+        .map {
+            img {
+                display:block;
+                width:100%;
+            }
+
+            @include width-medium() {
+                width:55%;
+                padding-left:10%;
+            }
+        }
+    }
+
+    .details-section {
+        background:#eee;
+        padding:50px 0;
+
+        .lo-container {
+            display:flex;
+            flex-wrap: wrap;
+        }
+        h2 {
+            width:100%;
+            margin-bottom:5px;
+            @include font-size(18, 18);
+            font-weight:$bold;
+            text-align:center;
+        }
+        .h2-subheading  {
+            width:100%;
+            margin-bottom:10px;
+            @include font-size(14, 14);
+            font-weight:$fw-semibold;
+            text-align:center;
+        }
+        .group {
+            background:#fff;
+            padding:30px;
+            margin: 2%;
+            width:46%;
+            border-radius:2px;
+            h3 {
+                @include font-size(22, 22);
+                font-weight:$fw-semibold;
+                margin-bottom:20px;
+            }
+            p {
+                margin-bottom:10px;
+                @include font-size(16, 22);
+            }
+        }
+    }
+}
+
 #team-members-page {
     .pagination {
+        width:100%;
         margin: 0 auto;
     }
     section {
