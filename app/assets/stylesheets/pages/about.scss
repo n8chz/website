@@ -2,9 +2,9 @@
 @import 'mixins';
 
 #about-page {
-    section.top-banner-section {
+    section.organisation-top-banner-section {
         .inner {
-            background-image:image-url("about-page-header.png");
+            background-image:image-url("company/about-header.png");
         }
         h1 {
             text-align:left;
@@ -13,7 +13,7 @@
     section.stats-section {
         padding:70px 0;
         background-color:#8A89C0;
-        background-image:image-url('stats-background.png');
+        background-image:image-url('company/stats-background.png');
         background-repeat:no-repeat;
         background-size:cover;
         .hexes {
@@ -50,7 +50,7 @@
                 @include width-medium() {
                     width:140px;
                     height:155px;
-                    background-image:image-url('stats-hex.png');
+                    background-image:image-url('company/stats-hex.png');
                     background-size:contain;
                     padding:20px;
                     margin:10px;
@@ -282,14 +282,15 @@
                 width:55%;
                 padding-left:10%;
             }
-            table {
-                width:45%;
-                display:block;
-            }
         }
         table {
             width:100%;
             display:none;
+            @include width-medium() {
+                width:45%;
+                display:block;
+            }
+
             th {
                 color: $color-2;
                 padding:10px 10px;
